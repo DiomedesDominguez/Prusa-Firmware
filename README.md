@@ -1,3 +1,7 @@
+# ABOUT THIS FORK
+
+My main goal regarding having this fork is to test custom modifications for my Prusa Bear. Instead of using Prusament PETG for the plastic parts I'm using ABS+GF, maybe later I will change it for metal ones.
+
 # Prusa Firmware MK3
 
 This repository contains the source code and the development versions of the firmware running on the [Original Prusa i3](https://prusa3d.com/) MK3S/MK3/MK2.5S/MK2.5 line of printers.

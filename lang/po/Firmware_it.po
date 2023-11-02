@@ -70,7 +70,7 @@ msgstr "Ambiente"
 
 #. MSG_CONFIRM_CARRIAGE_AT_THE_TOP c=20 r=3
 #: ../../Firmware/ultralcd.cpp:2826
-msgid "Are left and right Z~carriages all up?"
+msgid "Are left and right Z-carriages all up?"
 msgstr "I carrelli Z sin/des sono altezza max?"
 
 #. MSG_SOUND_BLIND c=7
@@ -2341,7 +2341,7 @@ msgstr ""
 #. MSG_BED_SKEW_OFFSET_DETECTION_SKEW_MILD c=20 r=8
 #: ../../Firmware/ultralcd.cpp:3189
 msgid "XYZ calibration all right. X/Y axes are slightly skewed. Good job!"
-msgstr "Calibrazion XYZ corretta. Assi X/Y leggermente storti. Ben fatto!"
+msgstr "Calibrazione XYZ corretta. Assi X/Y leggermente storti. Ben fatto!"
 
 #. MSG_BED_SKEW_OFFSET_DETECTION_WARNING_FRONT_BOTH_FAR c=20 r=8
 #: ../../Firmware/ultralcd.cpp:3170
@@ -2371,7 +2371,7 @@ msgstr "Calibrazione XYZ fallita. Punti anteriori non raggiungibili."
 #: ../../Firmware/messages.cpp:16 ../../Firmware/ultralcd.cpp:3155
 #: ../../Firmware/ultralcd.cpp:3183
 msgid "XYZ calibration failed. Please consult the manual."
-msgstr "Calibraz. XYZ fallita. Consultare manuale."
+msgstr "Calibrazione XYZ fallita. Consultare manuale."
 
 #. MSG_BED_SKEW_OFFSET_DETECTION_FAILED_FRONT_RIGHT_FAR c=20 r=6
 #: ../../Firmware/ultralcd.cpp:3161
@@ -2572,6 +2572,11 @@ msgstr ""
 #: ../../Firmware/mmu2_reporting.cpp:426
 msgid "Sensitivity"
 msgstr "Sensibilità"
+
+#. MSG_MBL_FAILED_Z_CAL c=20 r=4
+#: ../../Firmware/Marlin_main.cpp:2976
+msgid "Mesh bed leveling failed. Please run Z calibration."
+msgstr "Livellamento piano fallito. Si prega di eseguire la calibrazione Z."
 
 #~ msgid "Remove old filament and press the knob to start loading new filament."
 #~ msgstr "Rimuovi il fil. precedente e premi la manopola per caricare il nuovo."

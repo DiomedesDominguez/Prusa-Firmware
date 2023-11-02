@@ -14,8 +14,16 @@ const uint16_t FW_VERSION_NR[4] PROGMEM = {
     FW_MAJOR,
     FW_MINOR,
     FW_REVISION,
-(uint16_t)(FW_COMMIT_HASH) // explicitly truncate the hash to fit
+    FW_TWEAK,
 };
+
+const char FW_VERSION_HASH[] PROGMEM = FW_COMMIT_HASH;
+static_assert(sizeof(FW_VERSION_HASH) == FW_COMMIT_HASH_LENGTH + 1);
+
+const char* FW_VERSION_HASH_P()
+{
+    return FW_VERSION_HASH;
+}
 
 const char* FW_VERSION_STR_P()
 {
@@ -147,7 +155,7 @@ inline bool strncmp_PP(const char *p1, const char *p2, uint8_t n)
 				return -1;
 			if (pgm_read_byte(p1) > pgm_read_byte(p2))
 				return 1;
-		}            
+		}
     }
     return 0;
 }

@@ -22,7 +22,6 @@
 #include "pins.h"
 #include "Timer.h"
 #include "mmu2.h"
-extern uint8_t mbl_z_probe_nr;
 
 #ifndef AT90USB
 #define  HardwareSerial_h // trick to disable the standard HWserial
@@ -65,16 +64,6 @@ extern uint8_t mbl_z_probe_nr;
 #endif
 
 #include "lcd.h"
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-extern FILE _uartout;
-#ifdef __cplusplus
-}
-#endif
-
-#define uartout (&_uartout)
 
 #define SERIAL_PROTOCOL(x) (MYSERIAL.print(x))
 #define SERIAL_PROTOCOL_F(x,y) (MYSERIAL.print(x,y))
@@ -236,7 +225,7 @@ enum class HeatingStatus : uint8_t
 extern HeatingStatus heating_status;
 
 extern bool fans_check_enabled;
-extern float homing_feedrate[];
+constexpr float homing_feedrate[] = HOMING_FEEDRATE;
 extern uint8_t axis_relative_modes;
 extern float feedrate;
 extern int feedmultiply;
@@ -299,9 +288,6 @@ extern bool mesh_bed_leveling_flag;
 extern bool saved_printing;
 extern uint32_t saved_sdpos;
 extern uint8_t saved_printing_type;
-#define PRINTING_TYPE_SD 0
-#define PRINTING_TYPE_USB 1
-#define PRINTING_TYPE_NONE 2
 
 extern uint16_t saved_extruder_temperature; //!< Active extruder temperature
 extern uint8_t saved_bed_temperature; //!< Bed temperature
